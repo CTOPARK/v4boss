@@ -1241,25 +1241,10 @@ class mainCog(commands.Cog):
 			command_list += ','.join(command[12]) + ' [뽑을인원수] [아이디1] [아이디2]...\n'     #!사다리
 			command_list += ','.join(command[27]) + ' [아이디1] [아이디2]...(최대 12명)\n'     #!경주
 			command_list += ','.join(command[41]) + ' [추첨인원] (대기시간/초) *(메모)\n'    #!럭키박스
-			command_list += ','.join(command[35]) + ' [판매금액] (거래소세금)\n'     #!수수료
-			command_list += ','.join(command[36]) + ' [거래소금액] [실거래금액] (거래소세금)\n'     #!페이백
-			command_list += ','.join(command[13]) + ' [아이디]\n'     #!정산
-			command_list += ','.join(command[14]) + ' 또는 ' + ','.join(command[14]) + ' 0000, 00:00\n'     #!보스일괄
-			command_list += ','.join(command[40]) + ' 또는 ' + ','.join(command[40]) + ' 0000, 00:00\n'     #!멍일괄
 			command_list += ','.join(command[15]) + '\n'     #!q
 			command_list += ','.join(command[16]) + ' [할말]\n'     #!v
 			command_list += ','.join(command[17]) + '\n'     #!리젠
 			command_list += ','.join(command[18]) + '\n'     #!현재시간
-			command_list += ','.join(command[24]) + '\n'     #!킬초기화
-			command_list += ','.join(command[25]) + '\n'     #!킬횟수 확인
-			command_list += ','.join(command[25]) + ' [아이디]\n'     #!킬
-			command_list += ','.join(command[26]) + ' [아이디]\n'     #!킬삭제
-			command_list += ','.join(command[33]) + ' [아이디] 또는 ' + ','.join(command[33]) + ' [아이디] [횟수]\n'     #!킬차감
-			command_list += ','.join(command[29]) + '\n'     #!아이템 목록 초기화
-			command_list += ','.join(command[30]) + '\n'     #!아이템 목록 확인
-			command_list += ','.join(command[30]) + ' [아이템] 또는 ' + ','.join(command[30]) + ' [아이템] [개수]\n'     #!아이템 목록 입력
-			command_list += ','.join(command[31]) + ' [아이템]\n'     #!아이템 목록에서 삭제
-			command_list += ','.join(command[32]) + ' [아이템] 또는 ' + ','.join(command[32]) + ' [아이템] [개수]\n'     #!아이템 차감
 			command_list += ','.join(command[19]) + '\n'     #!공지
 			command_list += ','.join(command[19]) + ' [공지내용]\n'     #!공지
 			command_list += ','.join(command[20]) + '\n'     #!공지삭제
@@ -1269,8 +1254,7 @@ class mainCog(commands.Cog):
 			command_list += ','.join(command[22]) + '\n'     #보스탐
 			command_list += ','.join(command[23]) + '\n'     #!보스탐
 			command_list += '[보스명]컷 또는 [보스명]컷 0000, 00:00\n'  
-			command_list += '[보스명] 컷 또는 [보스명] 컷 0000, 00:00\n'   
-			command_list += '[보스명]멍 또는 [보스명]멍 0000, 00:00\n'     
+			command_list += '[보스명] 컷 또는 [보스명] 컷 0000, 00:00\n'       
 			command_list += '[보스명]예상 또는 [보스명]예상 0000, 00:00\n' 
 			command_list += '[보스명]삭제\n'     
 			command_list += '[보스명]메모 [할말]\n'
@@ -1281,7 +1265,7 @@ class mainCog(commands.Cog):
 					)
 			embed.add_field(
 					name="----- 추가기능 -----",
-					value= '```- [보스명]컷/멍/예상  [할말] : 보스시간 입력 후 빈칸 두번!! 메모 가능\n- [보스명]컷 명령어는 초성으로 입력가능합니다.\n  ex)' + bossData[0][0] + '컷 => ' + convertToInitialLetters(bossData[0][0] +'컷') + ', ' + bossData[0][0] + ' 컷 => ' + convertToInitialLetters(bossData[0][0] +' 컷') + '```'
+					value= '```- [보스명]컷/예상  [할말] : 보스시간 입력 후 빈칸 두번!! 메모 가능\n- [보스명]컷 명령어는 초성으로 입력가능합니다.\n  ex)' + bossData[0][0] + '컷 => ' + convertToInitialLetters(bossData[0][0] +'컷') + ', ' + bossData[0][0] + ' 컷 => ' + convertToInitialLetters(bossData[0][0] +' 컷') + '```'
 					)
 			await ctx.send( embed=embed, tts=False)
 		else:
